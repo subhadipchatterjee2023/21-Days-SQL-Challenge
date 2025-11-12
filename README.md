@@ -8,8 +8,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Language-SQL-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/Learning-In%20Public-orange?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Consistency-Wins-success?style=for-the-badge">
-  <img src="https://img.shields.io/github/stars/subhadipchatterjee2023/21-Days-SQL-Challenge?style=social">
 </p>
 
 ---
