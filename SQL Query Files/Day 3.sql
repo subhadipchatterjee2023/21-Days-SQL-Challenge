@@ -15,8 +15,3 @@ order by staff_name;
  select week, service, patients_request, patients_refused from services_weekly
  order by patients_refused desc
  limit 5;
- 
- 
- 
- 
- 
