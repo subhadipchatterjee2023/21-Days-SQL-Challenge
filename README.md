@@ -54,4 +54,4 @@ I’m participating in this challenge with the **Indian Data Club**, supported b
 ## 🏷️ Hashtags  
 #SQL #DataAnalytics #21DaysSQLChallenge #IndianDataClub #DPDzero  
 #SQLWithIDC #Codebasics #LearningInPublic #AnalyticsJourney #GrowEveryday  
-#ConsistencyWins #DataAnalystJourney #PracticeMakesProgress  
+#ConsistencyWins #DataAnalystJourney #PracticeMakesProgress #DataAnalyst
