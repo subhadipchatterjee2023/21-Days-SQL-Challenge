@@ -1,0 +1,85 @@
+Name,Email Address,AnswerQuery
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,SELECT DISTINCT category FROM pizza_types;
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,"select pizza_type_id, name,
+coalesce(ingredients, 'missing data') as ingredients
+from pizza_types
+limit 5;"
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,"select * from pizzas
+where price is null;"
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,"select * from orders
+where date = '2015-01-01';"
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,"select pt.name,
+p.price
+from pizzas p
+join pizza_types pt
+on p.pizza_type_id = pt.pizza_type_id
+order by p.price desc;"
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,"select pt.name,
+p.size
+from pizzas p
+join pizza_types pt
+on p.pizza_type_id = pt.pizza_type_id;"
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,"select pt.name,
+p.price
+from pizzas p
+join pizza_types pt
+on p.pizza_type_id = pt.pizza_type_id
+where p.price between 15.00 and 17.00
+order by p.price;"
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,"select pt.name
+from pizza_types pt
+where pt.name like '%chicken%';"
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,"select * 
+from orders o
+join order_details od
+on o.order_id = od.order_id
+where date = '2015-02-15' and time > '20:00:00'
+order by time;"
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,"select sum(quantity) as total_pizzas_sold
+from order_details;"
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,"select round(avg(price),2) as avg_pizza_price
+from pizzas;"
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,"SELECT
+o.order_id,
+SUM(p.price * od.quantity) AS total_value
+FROM orders AS o
+JOIN order_details AS od 
+ON o.order_id = od.order_id
+JOIN pizzas AS p 
+ON od.pizza_id = p.pizza_id
+GROUP BY o.order_id;"
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,"SELECT
+pt.category,
+SUM(od.quantity) AS total_quantity
+FROM pizza_types AS pt
+JOIN pizzas AS p 
+ON pt.pizza_type_id = p.pizza_type_id
+JOIN order_details AS od 
+ON p.pizza_id = od.pizza_id
+GROUP BY pt.category;"
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,"SELECT
+pt.category,
+SUM(od.quantity) AS total_quantity
+FROM pizza_types AS pt
+JOIN pizzas AS p 
+ON pt.pizza_type_id = p.pizza_type_id
+JOIN order_details AS od 
+ON p.pizza_id = od.pizza_id
+GROUP BY pt.category
+HAVING SUM(od.quantity) > 5000;"
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,"SELECT *
+FROM pizzas AS p
+LEFT JOIN
+pizza_types AS pt
+ON p.pizza_type_id = pt.pizza_type_id 
+LEFT JOIN order_details AS od
+ON p.pizza_id = od.pizza_id
+WHERE od.order_id IS NULL;"
+Subhadip Chatterjee,subhadip.chatterjee2023@gmail.com,"SELECT
+p1.pizza_type_id,
+(MAX(p2.price) - MIN(p1.price)) AS price_difference
+FROM pizzas AS p1
+INNER JOIN pizzas AS p2
+ON p1.pizza_type_id = p2.pizza_type_id
+AND p1.size <> p2.size
+GROUP BY p1.pizza_type_id;"
