@@ -33,7 +33,8 @@ I’m participating in this challenge with the **Indian Data Club**, supported b
 📂 **Posters** — daily challenge posters and visuals  
 📂 **SQL Query Files** — `.sql` scripts for each day  
 📂 **SQL Query Images** — screenshots of query outputs  
-
+📂 **SQL Murder Mystery** — SQL Murder Mystery Project 
+📂 **The Great Pizza Analytics Project** — The Great Pizza Analytics Project
 ---
 
 ## 💡 Why I Started This Challenge  
